@@ -1,0 +1,47 @@
+.container {
+  margin: var(--hecto) 0;
+}
+
+.containerFrame {
+  composes: containerFrame from "./container.module.css";
+  color: var(--color-text-default-inverse);
+  margin: 0 auto;
+  padding: var(--hecto) 0;
+}
+
+/* TODO: withSubheadline property needs to be discussed further */
+.container.withSubheadline {
+  margin-bottom: var(--milli);
+}
+
+.containerFrame.withSubheadline {
+  margin-bottom: var(--milli);
+}
+
+.title {
+  composes: h3 from global;
+}
+
+.titleAlone {
+  text-align: center;
+}
+
+.subtitle {
+  font-size: var(--subtitle-size);
+  letter-spacing: var(--subtitle-line);
+  line-height: var(--subtitle-line);
+  margin-top: var(--femto);
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: var(--display-size);
+    line-height: var(--display-line);
+  }
+
+  .subtitle {
+    font-size: var(--heading2-size);
+    letter-spacing: var(--heading2-line);
+    letter-spacing: var(--letter-spacing-medium);
+  }
+}
